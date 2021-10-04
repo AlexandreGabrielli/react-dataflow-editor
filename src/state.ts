@@ -40,7 +40,10 @@ export type Node<S extends Schema, K extends keyof S = keyof S> = {
 		kind: k
 		inputs: Record<GetInputs<S, k>, null | string>
 		outputs: Record<GetOutputs<S, k>, string[]>
-		position: Position
+		position: Position,
+		params?: {
+			[key: string]: any
+		}
 	}
 }[K]
 
