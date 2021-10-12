@@ -2,7 +2,8 @@ import React from "react"
 
 export type Position = { x: number; y: number }
 interface ChildComponentProps {
-	id: string
+	id: string,
+	params?: { [key: string]: any }
 }
 export type Kind<I extends string, O extends string> = Readonly<{
 	name: string

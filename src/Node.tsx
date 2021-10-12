@@ -58,7 +58,7 @@ export function GraphNode<S extends Schema>(props: GraphNodeProps<S>) {
 		props.focus.id === props.node.id
 
 	const { borderColor } = context.options
-	const FooterComponent = Footer ? <Footer id={props.node.id} /> : null
+	const FooterComponent = Footer ? <Footer id={props.node.id} params={props.node.params} /> : null
 
 	return (
 		<g
